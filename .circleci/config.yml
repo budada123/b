@@ -1,0 +1,9 @@
+version: 2
+jobs:
+ build:
+   machine: true
+   steps:
+     - checkout
+     # start proprietary DB using private Docker image
+     # with credentials stored in the UI
+     - run: | docker run foxy28/agent ~/.buildkite-agent/bin/buildkite-agent start
